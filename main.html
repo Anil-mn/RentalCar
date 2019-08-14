@@ -20,7 +20,7 @@
   <script src='script.js'></script>
 </head>
 
-<body class="">
+<body class="" onload="load()">
  
       <!-- Collapse -->
       <div class="collapse navbar-collapse" id="sidenav-collapse-main">
@@ -315,7 +315,7 @@
   <form class="forms-sample" action="php/book.php" method="Post">
     <div class="form-group">
       <label for="exampleInputEmail1">Select car</label>
-      <select id="ticket" name='tcname' class="form-control" aria-placeholder="ticket type">
+      <select id="vcnum" name='vcnum' class="form-control" aria-placeholder="ticket type">
               <option  >select your car</option>
               <option value="kl 48 H 1212" >kl 48 H 1212</option>
               <option  value="KL 51 H 1239">KL 51 H 1239</option>
@@ -323,9 +323,10 @@
               <option  value="kl 51 E 322">kl 51 E 322</option>
               <option  value="KL 51 E 3032">KL 51 E 3032</option>
          </select> 
-         <input type="date" class="date"><br><br>
-         <input type="number" name='number' required class="form-control" id="ne" placeholder="licence Number">
-         <button type="button" class="btn btn-success btn-fw" onclick="price()">Book</button>
+         <input type="date" id='date' name='date' class="date"><br><br>
+         <input type="text" name='number'  required class="form-control" id="ne" placeholder="licence Number">
+         <button type="button" class="btn btn-success btn-fw" onclick="check()">Check</button>
+         <button type="submit" id='no' class="btn btn-success btn-fw" onclick="demo()">Book</button>
     </div>
   <!--   Core   -->
   <script src="./assets/js/plugins/jquery/dist/jquery.min.js"></script>
