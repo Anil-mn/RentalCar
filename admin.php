@@ -6,7 +6,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>
-    rental Car
+    Argon Dashboard - Free Dashboard for Bootstrap 4 by Creative Tim
   </title>
   <!-- Favicon -->
   <link href="./assets/img/brand/favicon.png" rel="icon" type="image/png">
@@ -118,88 +118,26 @@
             </div>
             <div class="table-responsive">
               <!-- Projects table -->
+              <?php
+				  include('php/conn.php');
+                  $query = mysqli_query($con, "SELECT * FROM `user`");
+                  ?>
               <table id='vnumber' class="table align-items-center table-flush">
                 <thead class="thead-light">
                   <tr>
-                    <th scope="col">V number</th>
-                    <th scope="col">V name</th>
-                    <th scope="col">no seat</th>
-                    <th scope="col">rent/day</th>
-                    <th scope="col"></th>
+                    <th scope="col">id</th>
+                    <th scope="col">name</th>
+                    <th scope="col">number</th>
+                    <th scope="col">password</th>
+                    
                   </tr>
                 </thead>
-                <tbody>
-                  <tr >
-                    <th scope="row"  class="btn btn-sm btn-primary" >
-                      kl 48 H 1212
-                    </th>
-                    <td   onclick="demo()">
-                      innova
-                    </td>
-                    <td>
-                      6
-                    </td>
-                    <td>
-                      2500
-                    </td>
-                  </tr>
-                  <tr>
-                    <th scope="row" class="btn btn-sm btn-primary">
-                      KL 51 H 1239
-                    </th>
-                    <td>
-                      Swift
-                    </td>
-                    <td>
-                      4
-                    </td>
-                    <td>
-                      2000
-                    </td>
-                  </tr>
-                  <tr>
-                    <th scope="row"  class="btn btn-sm btn-primary">
-                      KL 48 E 9131
-                    </th>
-                    <td>
-                      alto
-                    </td>
-                    <td>
-                      4
-                    </td>
-                    <td>
-                      1500
-                    </td>
-                  </tr>
-                  <tr>
-                    <th scope="row" onclick="demo()" class="btn btn-sm btn-primary">
-                      kl 51 E 322
-                    </th>
-                    <td>
-                      bolero
-                    </td>
-                    <td>
-                      6
-                    </td>
-                    <td>
-                      2250
-                    </td>
-                  </tr>
-                  <tr>
-                    <th scope="row" onclick="demo()" class="btn btn-sm btn-primary">
-                      KL 51 E 3032
-                    </th>
-                    <td>
-                      Benz
-                    </td>
-                    <td>
-                      4
-                    </td>
-                    <td>
-                      6000
-                    </td>
-                  </tr>
-                </tbody>
+                <?php
+                   while($row = mysqli_fetch_array($query))
+                 { 
+                 echo "<tr><td>".$row['id']."</td><td>".$row['name']."</td><td>".$row['number']."</td><td>".$row['password']."</td></tr>"; 
+                  }?>
+               
               </table>
             </div>
           </div>
@@ -209,24 +147,31 @@
             <div class="card-header border-0">
               <div class="row align-items-center">
                 <div class="col">
-                  <h3 class="mb-0">Social traffic</h3>
+                  <h3 class="mb-0">Booked Cars</h3>
                 </div>
                 <div class="col text-right">
-                  <a href="#!" class="btn btn-sm btn-primary">See all</a>
+                  <a href="#!" class="btn btn-sm btn-primary"></a>
                 </div>
               </div>
             </div>
             <div class="table-responsive">
               <!-- Projects table -->
+              <?php
+				  include('php/conn.php');
+                  $query = mysqli_query($con, "SELECT * FROM `book`");?>
               <table class="table align-items-center table-flush">
                 <thead class="thead-light">
                   <tr>
-                    <th scope="col">Color</th>
-                    <th scope="col">Fual</th>
+                    <th scope="col">RegNO</th>
+                    <th scope="col">Date</th>
                     <th scope="col">contact number</th>
                   </tr>
-                </thead>
-                <tbody>
+                </thead><?php
+                while($row = mysqli_fetch_array($query))
+                 { 
+                 echo "<tr><td>".$row['regno']."</td><td>".$row['date']."</td><td>".$row['number']."</td></tr>"; 
+                  }?>
+                <!-- <tbody>
                   <tr>
                     <th scope="row">
                       Red
@@ -296,7 +241,7 @@
                       </div>
                     </td>
                   </tr>
-                </tbody>
+                </tbody> -->
               </table>
             </div>
           </div>
@@ -306,28 +251,7 @@
     <div>
   </div>
   </div>
-  <div class="row mt-5">
-    <div class="col-xl-8 mb-5 mb-xl-0">
-      <div class="card shadow">
-        <div class="card-header border-0">
-          <div class="row align-items-center">
-            <div class="col">
-  <form class="forms-sample" action="php/book.php" method="Post">
-    <div class="form-group">
-      <label for="exampleInputEmail1">Select car</label>
-      <select id="vcnum" name='vcnum' class="form-control" aria-placeholder="ticket type">
-              <option  >select your car</option>
-              <option value="kl 48 H 1212" >kl 48 H 1212</option>
-              <option  value="KL 51 H 1239">KL 51 H 1239</option>
-              <option  value="KL 48 E 9131"> KL 48 E 9131</option>
-              <option  value="kl 51 E 322">kl 51 E 322</option>
-              <option  value="KL 51 E 3032">KL 51 E 3032</option>
-         </select> 
-         <input type="date" id='date' name='date' class="date"><br><br>
-         <input type="text" name='number'  required class="form-control" id="ne" placeholder="licence Number">
-         <button type="button" class="btn btn-success btn-fw" onclick="check()">Check</button>
-         <button type="submit" id='no' class="btn btn-success btn-fw" onclick="demo()">Book</button>
-    </div>
+  
   <!--   Core   -->
   <script src="./assets/js/plugins/jquery/dist/jquery.min.js"></script>
   <script src="./assets/js/plugins/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
