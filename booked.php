@@ -112,137 +112,38 @@
                   <h3 class="mb-0">Available Cars</h3>
                 </div>
                 <div class="col text-right">
-                  <a href="#!" class="btn btn-sm btn-primary">select</a>
+                  <a href="main.html" class="btn btn-sm btn-primary">Back</a>
                 </div>
               </div>
             </div>
             <div class="table-responsive">
+            
               <!-- Projects table -->
               <?php
-				  include('php/conn.php');
-                  $query = mysqli_query($con, "SELECT * FROM `user`");
-                  ?>
+                  
+                  include('php/conn.php');
+                  $number=$_POST['num'];
+                  $query = mysqli_query($con, "SELECT * FROM `book`  WHERE `number` ='$number'");?>
               <table id='vnumber' class="table align-items-center table-flush">
                 <thead class="thead-light">
                   <tr>
                     <th scope="col">id</th>
                     <th scope="col">name</th>
                     <th scope="col">number</th>
-                    <th scope="col">password</th>
+                    
                     
                   </tr>
                 </thead>
                 <?php
-                   while($row = mysqli_fetch_array($query))
-                 { 
-                 echo "<tr><td>".$row['id']."</td><td>".$row['name']."</td><td>".$row['number']."</td><td>".$row['password']."</td></tr>"; 
-                  }?>
+                  while($row = mysqli_fetch_array($query))
+                    { 
+                    echo "<tr><td>".$row['regno']."</td><td>".$row['date']."</td><td>".$row['number']."</td></tr>"; 
+                     }?>
                
               </table>
             </div>
           </div>
-        </div>
-        <div class="col-xl-4">
-          <div class="card shadow">
-            <div class="card-header border-0">
-              <div class="row align-items-center">
-                <div class="col">
-                  <h3 class="mb-0">Booked Cars</h3>
-                </div>
-                <div class="col text-right">
-                  <a href="#!" class="btn btn-sm btn-primary"></a>
-                </div>
-              </div>
-            </div>
-            <div class="table-responsive">
-              <!-- Projects table -->
-              <?php
-				  include('php/conn.php');
-                  $query = mysqli_query($con, "SELECT * FROM `book`");?>
-              <table class="table align-items-center table-flush">
-                <thead class="thead-light">
-                  <tr>
-                    <th scope="col">RegNO</th>
-                    <th scope="col">Date</th>
-                    <th scope="col">contact number</th>
-                  </tr>
-                </thead><?php
-                while($row = mysqli_fetch_array($query))
-                 { 
-                 echo "<tr><td>".$row['regno']."</td><td>".$row['date']."</td><td>".$row['number']."</td></tr>"; 
-                  }?>
-                <!-- <tbody>
-                  <tr>
-                    <th scope="row">
-                      Red
-                    </th>
-                    <td>
-                    Diesel
-                    </td>
-                    <td>
-                      9969145674
-                    </td>
-                  </tr>
-                  <tr>
-                    <th scope="row">
-                      white
-                    </th>
-                    <td>
-                      Petrol
-                    </td>
-                    <td>
-                      9961234567
-                    </td>
-                  </tr>
-                  <tr>
-                    <th scope="row">
-                      Blue
-                    </th>
-                    <td>
-                     Diesel
-                    </td>
-                    <td>
-                      9786574632
-                    </td>
-                  </tr>
-                  <tr>
-                    <th scope="row">
-                      Instagram
-                    </th>
-                    <td>
-                      3,678
-                    </td>
-                    <td>
-                      <div class="d-flex align-items-center">
-                        <span class="mr-2">75%</span>
-                        <div>
-                          <div class="progress">
-                            <div class="progress-bar bg-gradient-info" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%;"></div>
-                          </div>
-                        </div>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <th scope="row">
-                      twitter
-                    </th>
-                    <td>
-                      2,645
-                    </td>
-                    <td>
-                      <div class="d-flex align-items-center">
-                        <span class="mr-2">30%</span>
-                        <div>
-                          <div class="progress">
-                            <div class="progress-bar bg-gradient-warning" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="width: 30%;"></div>
-                          </div>
-                        </div>
-                      </div>
-                    </td>
-                  </tr>
-                </tbody> -->
-              </table>
+        
             </div>
           </div>
         </div>
