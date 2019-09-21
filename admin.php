@@ -94,11 +94,7 @@
           
         </div>
         <div class="col-xl-4">
-          
-            
-              
               <!-- Chart -->
-              
             </div>
           </div>
         </div>

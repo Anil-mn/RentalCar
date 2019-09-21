@@ -8,11 +8,11 @@ if($username =='admin@admin.com' && $password=='admin')
 	header('location: ../admin.php');
 }
 else{
- $query = "select * from user where name = '$username' and password = '$password'";
+ $query = "select * from user where number = '$username' and password = '$password'";
  $result = mysqli_query($con, $query);
  $check = mysqli_fetch_array($result);
 if(isset($check)){
- 	    $_SESSION['name'] = $_POST['name'];
+ 	    $_SESSION['number'] = $_POST['name'];
 		
 		 header('location: ../main.html');
 		

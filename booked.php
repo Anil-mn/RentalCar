@@ -1,12 +1,11 @@
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>
-    Argon Dashboard - Free Dashboard for Bootstrap 4 by Creative Tim
+    RentalCar
   </title>
   <!-- Favicon -->
   <link href="./assets/img/brand/favicon.png" rel="icon" type="image/png">
@@ -19,9 +18,7 @@
   <link href="./assets/css/argon-dashboard.css?v=1.1.0" rel="stylesheet" />
   <script src='script.js'></script>
 </head>
-
 <body class="" onload="load()">
- 
       <!-- Collapse -->
       <div class="collapse navbar-collapse" id="sidenav-collapse-main">
         <!-- Collapse header -->
@@ -41,13 +38,9 @@
           </div>
         </div>
         <!-- Form -->
-    
         <!-- Navigation -->
-        
         <!-- User -->
         <ul class="navbar-nav align-items-center d-none d-md-flex">
-          
-            </a>
             <div class="dropdown-menu dropdown-menu-arrow dropdown-menu-right">
               <div class=" dropdown-header noti-title">
                 <h6 class="text-overflow m-0">Welcome!</h6>
@@ -91,14 +84,9 @@
     <div class="container-fluid mt--7">
       <div class="row">
         <div class="col-xl-8 mb-5 mb-xl-0">
-          
         </div>
         <div class="col-xl-4">
-          
-            
-              
               <!-- Chart -->
-              
             </div>
           </div>
         </div>
@@ -141,7 +129,6 @@
               </table>
             </div>
           </div>
-        
             </div>
           </div>
         </div>
