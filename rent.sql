@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 14, 2019 at 09:39 AM
+-- Generation Time: Sep 22, 2019 at 12:02 PM
 -- Server version: 10.1.19-MariaDB
 -- PHP Version: 5.6.28
 
@@ -39,7 +39,10 @@ CREATE TABLE `book` (
 INSERT INTO `book` (`regno`, `date`, `number`) VALUES
 ('kl 51 E 322', '2019-08-28', 'sdg52345'),
 ('KL 48 E 9131', '2019-08-20', 'afasdf'),
-('KL 48 E 9131', '2019-08-19', '9746903914');
+('KL 48 E 9131', '2019-08-19', '9746903914'),
+('kl 51 E 322', '2019-09-02', '9876543210'),
+('kl 51 E 322', '2019-09-02', '9876543211'),
+('KL 51 H 1239', '2019-09-01', '9876543216');
 
 -- --------------------------------------------------------
 
@@ -59,7 +62,7 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `name`, `number`, `password`) VALUES
-(3, 'anil@ani.com', '123234', '1234');
+(6, 'malavika ', '9876543216', 'malu123');
 
 --
 -- Indexes for dumped tables
@@ -79,7 +82,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
